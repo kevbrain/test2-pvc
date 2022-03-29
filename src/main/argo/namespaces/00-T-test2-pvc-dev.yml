@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: test2-pvc-dev-trigger
+  namespace: test2-pvc-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: test2-pvc-dev-triggerbinding
+  template:
+    ref: test2-pvc-dev-triggertemplate

@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: test2-pvc-secret-0
+  labels:
+    app: test2-pvc    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: test2-pvc-dev
+  name: pvc-vol-1_claim
+  labels:
+    app: test2-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: ocs-storagecluster-cephfs
+---
